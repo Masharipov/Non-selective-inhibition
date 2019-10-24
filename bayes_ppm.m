@@ -1,5 +1,7 @@
 clear
 
+TEEEEEEEEEEEEEEST
+
 %load SPM.mat
 [spmmatfile] = spm_select(1,'^SPM\.mat$','Select SPM.mat');
 load(spmmatfile);
