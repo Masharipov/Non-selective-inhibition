@@ -34,9 +34,6 @@ l   = spm_data_read(SPM.VHp(1),'xyz',XYZ);
 VcB = VcB + (c'*SPM.PPM.dC{1}*c)*(l - SPM.PPM.l(1));
 post_SD = sqrt(VcB);                
 
-%prior SD
-prior_SD = full(sqrt(SPM.PPM.Cb));
-
 %choose effect size threshold
 %e.g. 0.1% BOLD signal
 ES = 0.1;
