@@ -28,7 +28,7 @@ XYZ  = SPM.xVol.XYZ;
 iXYZ = cumprod([1,SPM.xVol.DIM(1:2)'])*XYZ - sum(cumprod(SPM.xVol.DIM(1:2)'));
 cB    = spm_data_read(SPM(1).VCbeta,'xyz',XYZ); 
 
-%compute Posterior SD
+%compute Posterior Variance
 %choose contrast c = +1 or c = -1
 c=1;
 VcB   = c'*SPM.PPM.Cby*c;
