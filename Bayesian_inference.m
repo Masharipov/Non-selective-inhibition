@@ -11,7 +11,7 @@
 %masharipov@ihb.spb.ru
 %========================================================================
 
-% Before running the script use SPM12 to:
+% Before running the script use SPM12 (v6906) to:
 % 1) Create one-sample t-test at the second level for contrast e.g. (Cond A - Cond B)
 % 2) Estimate model using method: Classical
 % 3) Estimate model using method: Bayesian 2nd-level
