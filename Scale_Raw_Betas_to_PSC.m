@@ -2,7 +2,7 @@
 %Script was used in "Non-selective response inhibition in Go/NoGo task:
 %Bayesian analysis of fMRI data" paper
 
-%Convert Beta-values to Percent Signal Change (Poldrack, Mumford, Nichols, 2011, p.186)
+%Scale Raw Beta-values to Percent Signal Change (Poldrack, Mumford, Nichols, 2011, p.186)
 
 %Masharipov Ruslan, october, 2019
 %Institute of Human Brain of RAS, St. Petersburg, Russia
@@ -12,7 +12,7 @@
 
 %This is an example for a single subject
 
-% 1) estimate GLM fot single subject using SPM12
+% 1) estimate GLM for single subject using SPM12
 % 2) load SPM.mat 
 
 %set path
@@ -73,8 +73,8 @@ PSC(7).values = 0.5.*PSC(1).values - 0.5.*PSC(2).values + ...
  header(1:7)=B1;
  for j = [1:7]
         header(j).fname = [path '\PSC_' num2str(j, '%04d') '.nii'];
-        header(j).descrip = 'Percentage signal change image';    
-        header(j).private.descrip = 'Percentage signal change image';
+        header(j).descrip = 'Percent signal change image';    
+        header(j).private.descrip = 'Percent signal change image';
  end
  
  for k = [1:46]
