@@ -35,8 +35,7 @@ VcB   = c'*SPM.PPM.Cby*c;
 for j = 1:length(SPM.PPM.l)
     l   = spm_data_read(SPM.VHp(j),'xyz',XYZ);
     VcB = VcB + (c'*SPM.PPM.dC{j}*c)*(l - SPM.PPM.l(j));
-end
-%post_SD = sqrt(VcB);                
+end      
 
 %prior SD
 prior_SD = full(sqrt(c'*SPM.PPM.Cb*c));
