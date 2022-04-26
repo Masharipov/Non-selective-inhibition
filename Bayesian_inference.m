@@ -72,7 +72,7 @@ PPM_all=[PPM_pos_eff; PPM_neg_eff; PPM_null];
 Log_Post_Odds_all=[Log_Post_Odds_pos_eff; Log_Post_Odds_neg_eff; Log_Post_Odds_null];
     
 %hdr
-hdr = spm_vol([path '\Cbeta_0001.nii']);
+hdr = spm_vol([path filesep 'Cbeta_0001.nii']);
 
 %mask
 mask = spm_read_vols(hdr);
@@ -80,7 +80,7 @@ mask(~isnan(mask)) = 0;
 
 %save PPM
 for j=1:3
-        hdr.fname = [path '\PPM' info(j).name '.nii'];
+        hdr.fname = [path filesep 'PPM' info(j).name '.nii'];
         hdr.descrip = [info(j).description];    
         hdr.private.descrip = [info(j).description];
         tmp           = mask;
@@ -91,7 +91,7 @@ end
     
 %save Log Posterior Odds
 for j=1:3
-        hdr.fname = [path '\Log_Post_Odds' info(j).name '.nii'];
+        hdr.fname = [path filesep 'Log_Post_Odds' info(j).name '.nii'];
         hdr.descrip = [info(j).description];    
         hdr.private.descrip = [info(j).description];
         tmp           = mask;
